@@ -10,7 +10,7 @@ st.header("Activity Dashboard 👣🎯")
 
 st.divider()
 
-df = pd.read_csv("/home/anubhav/pyprojects/healthapp/HealthApp_2k.log.csv")
+df = pd.read_csv("/HealthApp_2k.log.csv")
 df['Time'] = df['Time'].str[:-4]
 df[['Date', 'Time']] = df['Time'].str.split('-', 1, expand=True)
 df['Date'] = df['Date'].str.replace(r'(\d{4})(\d{2})(\d{2})', r'\3/\2/\1', regex=True)
